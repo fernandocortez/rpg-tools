@@ -1,0 +1,8 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/rpg-tools:$TAG_NAME', '.']
+timeout: 2000s
+images:
+  - 'gcr.io/$PROJECT_ID/rpg-tools:$TAG_NAME'
+options:
+  machineType: E2_HIGHCPU_32
