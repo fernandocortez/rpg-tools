@@ -1,0 +1,10 @@
+image:
+    file: .gitpod.Dockerfile
+
+tasks:
+    - init: ./gradlew --refresh-dependencies clean build
+      command: quarkus dev
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
